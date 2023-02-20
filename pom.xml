@@ -16,7 +16,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.4.0</app.runtime>
-		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.6.3</mule.maven.plugin.version>
+		<maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
+	
 	</properties>
 
 	<build>
@@ -29,7 +31,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>3.8.0</version>
+				<version>3.6.3</version>
 				<extensions>true</extensions>
 				<configuration>
 
