@@ -10,7 +10,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="sampleappFlow" doc:id="57339639-5f3e-449f-88a7-52f2668440a6" >
 		<http:listener doc:name="Listener" doc:id="3486b228-b0e4-4cb3-ab61-70a3b2c747ac" config-ref="HTTP_Listener_config" path="/login"/>
-		<logger level="INFO" doc:name="Logger" doc:id="3850a2b1-1842-4386-a215-691beb2d5a10" message="---- flow started --- #[now()]"/>
 		<ee:transform doc:name="Transform Message" doc:id="998bd02b-d05c-4472-9c28-b36d8edbce75" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
@@ -21,7 +20,6 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="af7d3ba0-7b83-4337-b681-1cf972a9e829" message="--- end flow ----"/>
-		<logger level="INFO" doc:name="Logger" doc:id="d3a49003-0808-4bee-b101-f11193f58858" message="==== end =====#[now()]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="af7d3ba0-7b83-4337-b681-1cf972a9e829" message="#[now()]"/>
 	</flow>
 </mule>
